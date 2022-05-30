@@ -22,7 +22,7 @@ public class Principal {
             System.out.println("\t5. Sair");
             System.out.print("\n\tEscolha uma opção: ");
             op = sc.nextInt();
-
+//
             switch (op) {
                 case 1:
                     lstCarros.listaTodosCarros();

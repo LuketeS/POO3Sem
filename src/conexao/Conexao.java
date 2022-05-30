@@ -18,7 +18,7 @@ public class Conexao {
             //Define o driver de conexão padrão para essa conexão
             String nomeDriver = "com.mysql.cj.jdbc.Driver"; //com.mysql.jdbc.Driver 
             Class.forName(nomeDriver);
-            
+            //
             //Define os parâmetros de conexão ao banco
             //String servidor = "localhost"; //Caminho de rede até o BD
             String servidor = "localhost"; //Caminho de rede até o BD

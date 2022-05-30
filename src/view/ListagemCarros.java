@@ -18,6 +18,7 @@ public class ListagemCarros {
         // Gera a lista de carros localmente, que será preenchida
         List<Carro> listaDeCarros;
         listaDeCarros = new ArrayList<>();
+        //
 
         // Pega (obtém) a lista de carros através do objeto
         listaDeCarros = carro.obterListaDeCarros();
