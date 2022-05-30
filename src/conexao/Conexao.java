@@ -29,6 +29,7 @@ public class Conexao {
             
             //Parâmetros de conexão (usuário e senha)
             String usuario = "root";
+            //
             String senha = "senhasenha";
             
             //Define a conexão
