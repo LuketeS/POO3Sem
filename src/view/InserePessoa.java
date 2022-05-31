@@ -1,5 +1,6 @@
 package view;
 
+import conexao.PessoasDAO;
 import elementos.Pessoa;
 import java.util.Scanner;
 
@@ -19,11 +20,12 @@ public class InserePessoa {
             System.out.print("\nInforme o Fabricante: ");
             String nome = sc.nextLine().toUpperCase();
 
-            per.getNome(nome);
+            per.setNome(nome);
 
             PessoasDAO pD = new PessoasDAO();
-            pD.inserePessoa(pessoa);
-            System.out.println("\nCarro inserido com sucesso!");
+            pD.inserePessoa(per);
+            
+            System.out.println("Foi suave");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

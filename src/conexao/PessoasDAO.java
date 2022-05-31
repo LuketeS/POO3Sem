@@ -1,7 +1,7 @@
 package conexao;
 
 import elementos.Pessoa;
-import negocio.Carro;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,7 +18,7 @@ public class PessoasDAO {
             con.getConexao(); //Obtendo a conexão
 
             // Comando SQL na base = tabela de carros
-            String sql = "select * from tb_carros;";
+            String sql = "select * from tb_pessoa;";
 
             //Executa a query (comando SQL)
             /*PreparedStatement é usado para criar um objeto que representa a instrução SQL
@@ -35,9 +35,10 @@ public class PessoasDAO {
                 Pessoa per = new Pessoa(); //Criando uma instância, novo carro na memória
 
                 per.setId(resultado.getInt("idPessoa")); // Define ID do carro;
+                per.setNome(resultado.getString("nome")); // Define ID do carro;
 
                 // Insere o carro na lista Local
-                ListagemPessoa.add(per);
+                listaDePessoa.add(per);
             }
 
             // Após terminar, fecha a conexão
@@ -61,8 +62,8 @@ public class PessoasDAO {
         try {
             String sql = "";
             sql += "";
-            sql += "INSERT INTO tb_carros"
-                    + "(fabricante) VALUES (?)";
+            sql += "INSERT INTO tb_pessoa"
+                    + "(nome) VALUES (?)";
 
             st = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
