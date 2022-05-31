@@ -10,8 +10,7 @@ public class Principal {
         Scanner sc = new Scanner(System.in);
         int op = 0;
         
-        //Instanciando as classes auxiliares de Listagem e de Inserção
-        //Instanciando a classe auxiliar de Listagem
+
         ListagemPessoa lstPessoas = new ListagemPessoa();
         InserePessoa insPessoas = new InserePessoa();
 
@@ -33,7 +32,7 @@ public class Principal {
                 case 5:
                     break;
                 default:
-                    //throw new AssertionError();
+         
                     System.out.println("\n\t -- Opção inválida! -- \n");
                     
             }

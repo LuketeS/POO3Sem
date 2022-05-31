@@ -14,7 +14,7 @@ public class PessoasDAO {
         try {
        
             Conexao con = new Conexao();
-            con.getConexao(); //Obtendo a conexão
+            con.getConexao(); 
 
             String sql = "select * from tb_pessoa;";
 
@@ -28,10 +28,10 @@ public class PessoasDAO {
 
    
             while (resultado.next()) {
-                Pessoa per = new Pessoa(); //Criando uma instância, novo carro na memória
+                Pessoa per = new Pessoa(); 
 
-                per.setId(resultado.getInt("idPessoa")); // Define ID do carro;
-                per.setNome(resultado.getString("nome")); // Define ID do carro;
+                per.setId(resultado.getInt("idPessoa")); 
+                per.setNome(resultado.getString("nome")); 
 
        
                 listaDePessoa.add(per);
@@ -42,7 +42,7 @@ public class PessoasDAO {
             con.getConexao().close();
 
             return listaDePessoa;
-        } catch (SQLException e) { //Caso dê alguma exceção
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
         }
